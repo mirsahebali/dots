@@ -28,6 +28,7 @@
 * Monitor Setup
 ** Laptop Screen
 #+begin_src conf 
+
 monitor=eDP-1,1920x1080@60,0x0,1
 
 #+end_src
@@ -51,7 +52,8 @@ exec-once = /usr/bin/emacs --daemon
 # Start dbus daemon
 exec-once = dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus
 
-exec-once = dbus-update-activation-environment --systemd --all
+#exec-once = dbus-update-activation-environment --systemd --all
+exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 # Polkit
 exec-once=/usr/lib/polkit-kde-authentication-agent-1
 # Start autolock(sway) daemon
@@ -69,27 +71,40 @@ exec-once = nm-applet
 
 * Program Variables
 #+begin_src conf
+
 $terminal = kitty
+
 $fileManager = dolphin
 
 $menu = wofi --show drun
 
 $launcher = rofi -show run
-#$launcher = wofi -show drun
-#$launcher = fuzzel
+
+$wofi_launcer = wofi -show drun
+
+$fuzzel = fuzzel
 
 $browser = brave --password-store=basic
+
 $notification_panel = swaync-client -t
+
 $emacsclient = emacsclient -c
 
+$clear_notification = dunstctl close-all
 
+$rofi_6 = /home/mirsahebali/.config/rofi/launchers/type-6/launcher.sh
+
+$rofi_7 = /home/mirsahebali/.config/rofi/launchers/type-7/launcher.sh
+
+$redshift = redshift
 #+end_src
 
 * Default Environment Variables
 #+begin_src conf
 
 env = XCURSOR_SIZE,24
-
+env = QT_QPA_PLATFORM,wayland
+env = XDG_CURRENT_DESKTOP,Hyprland
 #+end_src
 
 * Input
@@ -106,6 +121,8 @@ input {
 
     touchpad {
         natural_scroll = yes
+        disable_while_typing = yes
+
     }
 
     sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
@@ -212,6 +229,7 @@ gestures {
 misc {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
     force_default_wallpaper = 0 # Set to 0 to disable the anime mascot wallpapers
+    vfr = true
 }
 #+end_src
 
@@ -236,14 +254,13 @@ device:epic-mouse-v1 {
 # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
 # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
  
- 
 windowrulev2 = nomaximizerequest, class:.* # You'll probably like this.
 
-
 windowrulev2 = float,class:^(org.kde.systemmonitor)$,title:(System Activity)
+
 windowrulev2 = float,class:^(pavucontrol)$,title:(Volume Control)
 
-
+windowrulev2 = float,class:^(alacritty)$,title:(Alacritty)
 
 #+end_src
 
@@ -251,15 +268,15 @@ windowrulev2 = float,class:^(pavucontrol)$,title:(Volume Control)
 
 #+begin_src conf
 
-workspace=1,bordersize:0,persistent:true
-workspace=2,bordersize:0,persistent:true
-workspace=3,bordersize:0,persistent:true
-workspace=4,bordersize:0,persistent:true
-workspace=5,bordersize:0,persistent:true
-workspace=6,bordersize:0,persistent:true
-workspace=7,bordersize:0,persistent:true
-workspace=8,bordersize:0,persistent:true
-workspace=9,bordersize:0,persistent:true
+workspace=1,bordersize:2,persistent:true
+workspace=2,bordersize:2,persistent:true
+workspace=3,bordersize:2,persistent:true
+workspace=4,bordersize:2,persistent:true
+workspace=5,bordersize:2,persistent:true
+workspace=6,bordersize:2,persistent:true
+workspace=7,bordersize:2,persistent:true
+workspace=8,bordersize:2,persistent:true
+workspace=9,bordersize:2,persistent:true
 #+end_src
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
@@ -277,10 +294,10 @@ bind = $mainMod, Q, killactive,
 bind = $mainMod SHIFT, Q, exit, 
 bind = $mainMod, E, exec, $fileManager
 bind = $mainMod SHIFT, V, togglefloating, 
-bind = $altMod, SPACE , exec, $launcher
+bind = $mainMod, SPACE , exec, $rofi_6
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod SHIFT, ENTER,  exec,  emacsclient -c
-bind = $mainMod, S, togglesplit, # dwindle
+bind = $mainMod, T, togglesplit, # dwindle
 bind = $mainMod, W, exec, $browser # start brave
 bind = $mainMod $altMod, L, exec, /home/mirsahebali/.config/hypr/scripts/lock.sh
 bind = $mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
@@ -355,10 +372,16 @@ bind=$mainMod,R,submap,resize
 submap=resize
 
 # sets repeatable binds for resizing the active window
-binde=,L,resizeactive,10 0
-binde=,H,resizeactive,-10 0
-binde=,U,resizeactive,0 -10
-binde=,K,resizeactive,0 10
+
+binde=,L,resizeactive,20 0
+
+binde=,H,resizeactive,-20 0
+
+binde=,J,resizeactive,0 -20
+
+binde=,K,resizeactive,0 20
+
+binde=,U,exec,$clear_notification
 
 # use reset to go back to the global submap
 bind=,escape,submap,reset 
@@ -376,4 +399,5 @@ windowrulev2 = opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$
 windowrulev2 = noanim,class:^(xwaylandvideobridge)$
 windowrulev2 = nofocus,class:^(xwaylandvideobridge)$
 windowrulev2 = noinitialfocus,class:^(xwaylandvideobridge)$
+
 #+end_src

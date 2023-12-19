@@ -2,4 +2,13 @@
 
 <channel name="xfce4-notifyd" version="1.0">
   <property name="log-max-size-enabled" type="bool" value="true"/>
+  <property name="date-time-custom-format" type="string" value="%a %H:%M:%S"/>
+  <property name="theme" type="string" value="Bright"/>
+  <property name="applications" type="empty">
+    <property name="known_applications" type="array">
+      <value type="string" value="Xfce4-notifyd settings"/>
+    </property>
+  </property>
+  <property name="notify-location" type="string" value="top-right"/>
+  <property name="do-slideout" type="bool" value="true"/>
 </channel>

@@ -88,7 +88,8 @@ alias kittyconf="cd ~/.config/kitty/ && vi kitty.conf"
 alias viconf='cd ~/.config/nvim/ && vi .'
 alias pb="~/pocketbase serve"
 alias alacrittyconf="~/.config/alacritty && vi"
-alias vi=nvim .bashrc
+alias vim=/usr/bin/nvim
+alias vi=/usr/bin/vim 
 alias qemu=qemu-system-x86_64
 alias pbs='echo ~/pocketbase serve &&  ~/pocketbase serve'
 alias dk='echo drizzle-kit && drizzle-kit'
@@ -104,9 +105,8 @@ alias v=nvim
 alias qconf="cd ~/.config/qtile/ && vi ."
 alias qrld="/home/mirsahebali/.config/qtile/reload.sh"
 alias zconf="vi ~/.zshrc"
-alias z="vi ~/.zshrc"
-alias nt="tmux -c 'cd ~/org && nvim .'"
-alias hc="vi ~/.config/hypr/hyprland.conf"
+alias z="vim ~/.zshrc"
+alias hc="emacsclient -c ~/.config/hypr/config.org"
 alias doom_emacs="emacs --init-directory=~/rice/emacs/"
 
 # Alias functions
