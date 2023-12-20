@@ -1,0 +1,22 @@
+* Clone this repo
+
+#+begin_src bash
+
+git clone git@github.com:mirsahebali/dots.git 
+
+#+end_src
+
+* Clone neovim repo
+#+begin_src bash
+
+git clone git@github.com:mirsahebali/LazyVim.git ~/.config/nvim 
+
+#+end_src
+
+* Clone Emacs Config repo
+
+#+begin_src bash
+
+git clone git@github.com:mirsahebali/emacs_config.git ~/.config/emacs
+
+#+end_src
