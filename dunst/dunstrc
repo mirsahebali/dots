@@ -196,7 +196,7 @@
 
     ### Icons ###
 
-    # Recursive icon lookup. You can set a single theme, instead of having to
+    # Recursive icon lookup. You can set a single theme, instead of having tojj
     # define all lookup paths.
     enable_recursive_icon_lookup = true
 
@@ -217,7 +217,7 @@
     max_icon_size = 128
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = /usr/share/icons/ePapirus/16x16/status/:/usr/share/icons/ePapirus/16x16/devices/
+    icon_path = /usr/share/icons/ePapirus/16x16/status/:/usr/share/icons/ePapirus/16x16/devices/:/usr/share/icons/ePapirus/16x16/actions/
 
     ### History ###
 
