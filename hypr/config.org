@@ -8,7 +8,7 @@
 - [[#monitor-setup][Monitor Setup]]
   - [[#laptop-screen][Laptop Screen]]
 - [[#auto-start][Auto Start]]
-- [[#program-variables][Program Variables]]
+- [[#script-variables][Script Variables]]
 - [[#default-environment-variables][Default Environment Variables]]
 - [[#input][Input]]
 - [[#general][General]]
@@ -71,7 +71,7 @@ exec-once = nm-applet
 exec-once =  kdeconnect-indicator &
 #+end_src
 
-* Program Variables
+* Script Variables
 #+begin_src conf
 
 $terminal = kitty
@@ -111,6 +111,8 @@ $volume_mute = /home/mirsahebali/.config/dunst/scripts/volume.sh mute
 $brightness_up = /home/mirsahebali/.config/dunst/scripts/brightness.sh up
 
 $brightness_down = /home/mirsahebali/.config/dunst/scripts/brightness.sh down
+# toggle pavucontrol
+$pavucontrol = /home/mirsahebali/.config/hypr/scripts/pavucontrol.sh
 #+end_src
 
 * Default Environment Variables
@@ -272,9 +274,9 @@ windowrulev2 = nomaximizerequest, class:.* # You'll probably like this.
 
 windowrulev2 = float,class:^(org.kde.systemmonitor)$,title:(System Activity)
 
-windowrulev2 = float,class:^(pavucontrol)$,title:(Volume control)
+windowrulev2 = float,class:(pavucontrol)
 
-windowrulev2 = float,class:^(alacritty)$,title:(Alacritty)
+windowrulev2 = float,class:(Alacritty)
 
 #+end_src
 
@@ -301,7 +303,10 @@ $mainMod = super
 $altMod = ALT
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod, RETURN, exec, $terminal
-bind = $mainMod SHIFT, U, exec, pavucontrol
+
+bind = $mainMod $altMod, RETURN, exec, alacritty
+
+bind = $mainMod SHIFT, U, exec, $pavucontrol
 bind = $mainMod SHIFT, RETURN, exec, $emacsclient
 bind = $mainMod, N, exec, $notification_panel
 bind = $mainMod, Q, killactive, 
@@ -401,10 +406,14 @@ binde=,J,resizeactive,0 -20
 binde=,K,resizeactive,0 20
 # Open the configuration file in emacs
 binde=,C,exec, emacsclient -c ~/.config/hypr/config.org
+# Open RSS Reader
+binde=,R,exec, [workspace 6] fluent-reader
+
+binde=,O,exec, [workspace 7] okular
 # use reset to go back to the global submap
 bind=,escape,submap,reset 
 # use reset to go back to the global submap
-bind=,O,submap,reset 
+bind=,X,submap,reset 
 
 # will reset the submap, meaning end the current one and return to the global one
 submap=reset

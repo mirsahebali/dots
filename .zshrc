@@ -22,6 +22,7 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/mirsahebali/go/bin
+export PATH=$PATH:/home/mirsahebali/.ghcup/bin
 
 # completion
 autoload -Uz compinit
@@ -73,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Haskell GHC source
-[ -f "/home/mirsahebali/.ghcup/env" ] && source "/home/mirsahebali/.ghcup/env" # ghcup-env
+#[ -f "/home/mirsahebali/.ghcup/env" ] && source "/home/mirsahebali/.ghcup/env" # ghcup-env
 alias li=lvim
 alias tmuxconf="cd ~/.config/tmux/ && vi tmux.conf"
 alias viconf="cd ~/.config/nvim/ && vi init.lua"
@@ -138,10 +139,10 @@ cfmt(){
 }
 co(){
   if [[ -f "$1.cpp" ]]; then
-    echo  g++ $1.cpp -o $1 && ./$1
-    g++ $1.cpp -o $1 && ./$1
+    echo  g++ $1.cpp -o $1 && sleep 1 && ./$1
+   g++ $1.cpp -o $1 && sleep 1 && ./$1
   else
-    echo gcc $1.c -o $1 && ./$1
+    echo gcc $1.c -o $1 && sleep 1 && ./$1
     gcc $1.c -o $1 && ./$1
   fi
 }
@@ -158,3 +159,5 @@ restart_emacs(){
     /usr/bin/emacs --daemon
   fi
 }
+
+[ -f "/home/mirsahebali/.ghcup/env" ] && source "/home/mirsahebali/.ghcup/env" # ghcup-env
