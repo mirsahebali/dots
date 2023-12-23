@@ -109,6 +109,7 @@ alias zconf="vi ~/.zshrc"
 alias z="vim ~/.zshrc"
 alias hc="emacsclient -c ~/.config/hypr/config.org"
 alias doom_emacs="emacs --init-directory=~/rice/emacs/"
+alias update_dots="~/dots/scripts/update.sh"
 
 # Alias functions
 rs_waybar(){
