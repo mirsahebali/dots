@@ -1,4 +1,3 @@
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export QT_QPA_PLATFORM=wayland
@@ -23,6 +22,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/mirsahebali/go/bin
 export PATH=$PATH:/home/mirsahebali/.ghcup/bin
+export PATH=$PATH:/home/mirsahebali/.config/emacs/bin
 
 # completion
 autoload -Uz compinit
@@ -108,8 +108,11 @@ alias qrld="/home/mirsahebali/.config/qtile/reload.sh"
 alias zconf="vi ~/.zshrc"
 alias z="vim ~/.zshrc"
 alias hc="emacsclient -c ~/.config/hypr/config.org"
-alias doom_emacs="emacs --init-directory=~/rice/emacs/"
-alias update_dots="~/dots/scripts/update.sh"
+alias doom_emacs="emacs --init-directory=~/fun/emacs/"
+alias update_all_dots="~/dots/scripts/update.sh"
+alias update_nvim="~/dots/scripts/update_nvim.sh"
+alias update_emacs="~/dots/scripts/update_emacs.sh"
+alias update_dots="~/dots/scripts/update_dots.sh"
 
 # Alias functions
 rs_waybar(){

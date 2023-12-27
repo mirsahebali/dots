@@ -16,7 +16,7 @@ sudo pacman -s git clang neovim gvim emacs curl \
 	qt5-wayland polkit polkit-gnome pam pamixer pambase openssh nm-connection-editor \
 	ninja lxappearance linux-headers hyprpicker gtk3 \
 	gtk2 dolphin dkms dbus bluedevil base \
-	autorandr arandr alligator sddm okular network-manager-applet ncurses figlet
+	autorandr arandr alligator sddm okular network-manager-applet ncurses figlet lf
 
 yay -S hyprland-git gopls goimports gofumpt yank wireplumber \
 	unzip swaybg swaync rustywind hyprpicker brave-bin \
