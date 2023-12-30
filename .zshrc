@@ -1,3 +1,14 @@
+pfetch
+printf "\n" || echo
+print-next-line
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export QT_QPA_PLATFORM=wayland
@@ -5,11 +16,11 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export HISTCONTROL=ignoreboth:erasedups
 export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
-export EDITOR='nvim'
+export EDITOR="nvim"
 export ARCHFLAGS="-arch x86_64"
 export NVM_DIR="$HOME/.nvm"
-export GOPATH=$HOME/go
-export GOBIN=$HOME/go/bin
+export GOPATH="$HOME/go"
+export GOBIN="$HOME/go/bin"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="/usr/lib/jvm/java-21-openjdk/bin/:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -31,8 +42,8 @@ zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 
 # Start oh my posh and set theme
-eval "$(oh-my-posh init zsh --config '~/.omp/space.omp.json')"
-
+# eval "$(oh-my-posh init zsh --config '~/.omp/space.omp.json')"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
@@ -88,7 +99,7 @@ alias ta='tmux attach'
 alias kittyconf="cd ~/.config/kitty/ && vi kitty.conf"
 alias viconf='cd ~/.config/nvim/ && vi .'
 alias pb="~/pocketbase serve"
-alias alacrittyconf="~/.config/alacritty && vi"
+alias alacrittyconf="~/.config/alacritty && nvim"
 alias vim=/usr/bin/nvim
 alias vi=/usr/bin/vim 
 alias qemu=qemu-system-x86_64
@@ -103,13 +114,12 @@ alias awconf="~/.config/awesome/ && vi rc.lua"
 alias docker="sudo docker"``
 alias iv=nvim
 alias v=nvim
-alias qconf="cd ~/.config/qtile/ && vi ."
-alias qrld="/home/mirsahebali/.config/qtile/reload.sh"
 alias zconf="vi ~/.zshrc"
 alias z="vim ~/.zshrc"
 alias hc="emacsclient -c ~/.config/hypr/config.org"
 alias doom_emacs="emacs --init-directory=~/fun/emacs/"
 alias update_all_dots="~/dots/scripts/update.sh"
+alias update_doom="~/dots/scripts/update_doom.sh"
 alias update_nvim="~/dots/scripts/update_nvim.sh"
 alias update_emacs="~/dots/scripts/update_emacs.sh"
 alias update_dots="~/dots/scripts/update_dots.sh"
@@ -165,3 +175,7 @@ restart_emacs(){
 }
 
 [ -f "/home/mirsahebali/.ghcup/env" ] && source "/home/mirsahebali/.ghcup/env" # ghcup-env
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+

@@ -255,7 +255,7 @@ misc {
 # Example per-device config
 # See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
 device:epic-mouse-v1 {
-    sensitivity = -0.5
+    sensitivity = 0.5
 }
 #+end_src>
 
@@ -410,14 +410,26 @@ binde=,R,exec, [workspace 6] fluent-reader
 
 binde=,O,exec, [workspace 7] okular
 # use reset to go back to the global submap
-bind=,escape,submap,reset 
+bind=,escape,submap,reset
 # use reset to go back to the global submap
-bind=,X,submap,reset 
+bind=,X,submap,reset
 
 # will reset the submap, meaning end the current one and return to the global one
 submap=reset
 
 # keybinds further down will be global again...
+
+# Submaps for notes
+bind=$mainMod SHIFT,N, submap, notes
+
+submap=notes
+
+binde=,W, exec, emacsclient -c ~/org/sem-4/4-week-plan.org
+
+bind=,X,submap,reset
+
+submap=reset
+
 #+end_src
 * Screen sharing
 #+begin_src conf
