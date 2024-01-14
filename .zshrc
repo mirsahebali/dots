@@ -1,6 +1,6 @@
-pfetch
-printf "\n" || echo
-print-next-line
+neofetch --config ~/.config/neofetch/small/ozozfetch.conf
+
+# zsh ~/.config/tmux/scripts/zsh.sh | grep piejflksjfskjflaskfjslkfjxoiwcjo
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -34,7 +34,14 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/mirsahebali/go/bin
 export PATH=$PATH:/home/mirsahebali/.ghcup/bin
 export PATH=$PATH:/home/mirsahebali/.config/emacs/bin
-
+export PATH=$PATH:/usr/lib/
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
 # completion
 autoload -Uz compinit
 compinit
@@ -42,7 +49,9 @@ zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 
 # Start oh my posh and set theme
+ 
 # eval "$(oh-my-posh init zsh --config '~/.omp/space.omp.json')"
+ 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -57,8 +66,8 @@ unsetopt SHARE_HISTORY
 
 [[ $- != *i* ]] && return
 
-export LC_ALL=en_IN.UTF-8
-#export LANG=en_IN.UTF-8
+# export LC_ALL=en_IN.UTF-8
+# export LANG=en_IN.UTF-8
 
 
 plugins=(git
@@ -72,50 +81,39 @@ plugins=(git
     dirhistory
 )
 
-# bun completions
+# Bun Completions
 [ -s "/home/mirsahebali/.bun/_bun" ] && source "/home/mirsahebali/.bun/_bun"
-#  Sourcing oh-my-zsh
+# Sourcing oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-#  Sourcing fzf
+#  Sourcing FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Compilation flags
   
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# Haskell GHC source
-#[ -f "/home/mirsahebali/.ghcup/env" ] && source "/home/mirsahebali/.ghcup/env" # ghcup-env
+
 alias li=lvim
-alias tmuxconf="cd ~/.config/tmux/ && vi tmux.conf"
-alias viconf="cd ~/.config/nvim/ && vi init.lua"
-alias tls='echo tmuxifier load-session &&  tmuxifier load-session'
-alias tns='echo tmuxifier new-session &&  tmuxifier new-session'
-alias tks='echo tmuxifier kill-session &&  tmuxifier kill-session'
-alias tes='echo tmuxifier edit-session &&  tmuxifier edit-session'
+alias tmuxconf="cd ~/.config/tmux/ && nvim tmux.conf"
+alias viconf="cd ~/.config/nvim/ && nvim init.lua"
 alias ta='tmux a'
-alias vimconf="cd ~/.config/nvim/ && vi"
-alias ta='tmux attach'
-alias kittyconf="cd ~/.config/kitty/ && vi kitty.conf"
-alias viconf='cd ~/.config/nvim/ && vi .'
+alias vimconf="cd ~/.config/nvim/ && nvim"
+alias kittyconf="cd ~/.config/kitty/ && nvim kitty.conf"
+alias viconf='cd ~/.config/nvim/ && nvim .'
 alias pb="~/pocketbase serve"
 alias alacrittyconf="~/.config/alacritty && nvim"
 alias vim=/usr/bin/nvim
 alias vi=/usr/bin/vim 
 alias qemu=qemu-system-x86_64
-alias pbs='echo ~/pocketbase serve &&  ~/pocketbase serve'
-alias dk='echo drizzle-kit && drizzle-kit'
 alias icat='echo kitty +kitten icat &&  kitty +kitten icat'
-alias bringsvg="~/Downloads/*.svg ./src/svgs"
 alias :q=exit
-alias hyprconf="~/.config/hypr && vi ."
+alias hyprconf="~/.config/hypr && nvim ."
 alias air=~/go/bin/air
-alias awconf="~/.config/awesome/ && vi rc.lua"
-alias docker="sudo docker"``
-alias iv=nvim
-alias v=nvim
-alias zconf="vi ~/.zshrc"
-alias z="vim ~/.zshrc"
+alias awconf="~/.config/awesome/ && nvim rc.lua"
+alias docker="sudo docker"
+alias zconf="nvim ~/.zshrc"
+alias z="nvim ~/.zshrc"
 alias hc="emacsclient -c ~/.config/hypr/config.org"
 alias doom_emacs="emacs --init-directory=~/fun/emacs/"
 alias update_all_dots="~/dots/scripts/update.sh"
@@ -123,7 +121,7 @@ alias update_doom="~/dots/scripts/update_doom.sh"
 alias update_nvim="~/dots/scripts/update_nvim.sh"
 alias update_emacs="~/dots/scripts/update_emacs.sh"
 alias update_dots="~/dots/scripts/update_dots.sh"
-
+alias rr="ranger"
 # Alias functions
 rs_waybar(){
   ((killall waybar || waybar &) && waybar &) && ((killall waybar || waybar &) && waybar &)

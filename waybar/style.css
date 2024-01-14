@@ -49,6 +49,7 @@ button:hover {
 
 #workspaces button {
   padding: 0 5px;
+  margin: 0 5px;
   background-color: transparent;
   color: #ffffff;
 }
@@ -93,6 +94,21 @@ button:hover {
   color: #ffffff;
   background-color: rgba(43, 48, 59, 0.5);
 }
+#idle_inhibitor {
+  color: #cb1ed1;
+}
+#pulseaudio {
+  color: greenyellow;
+}
+#cpu {
+  color: #f8e559;
+}
+#temperature {
+  color: #7fc7d9;
+}
+#memory {
+  color: #dcf2f1;
+}
 #user {
   padding: 0 10px;
   background-color: rgba(43, 48, 59, 0.5);
@@ -101,7 +117,7 @@ button:hover {
 #taskbar {
   padding: 0 4px;
   background-color: rgba(43, 48, 59, 0.5);
-  border-radius: 0 0 7px 0px;
+  border-radius: 0 0 3px 0px;
 }
 #window {
   padding-right: 9px;
@@ -114,9 +130,9 @@ button:hover {
 }
 #workspaces {
   margin: 0 7px;
-  padding: 0 7px;
+  /* padding: 0 7px; */
   background-color: rgba(43, 48, 59, 0.5);
-  border-radius: 0 0 7px 7px;
+  border-radius: 0 0 3px 3px;
   font-size: 16px;
 }
 
@@ -131,15 +147,17 @@ button:hover {
 }
 
 #clock {
-  background-color: #64727d;
+  background-color: #332941;
 }
 
 #battery {
+  color: #d5f0c1;
 }
 
 #battery.charging,
 #battery.plugged {
-  color: #ffffff;
+  color: #b4d4ff;
+
   background-color: #26a65b;
 }
 #battery.charged {
@@ -220,7 +238,7 @@ label:focus {
 }
 
 #tray {
-  background-color: #2980b9;
+  background-color: #11235a;
 }
 
 #tray > .passive {
@@ -233,7 +251,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-  border-radius: 0 0 0px 7px;
+  border-radius: 0 0 0px 3px;
 }
 
 #idle_inhibitor.activated {

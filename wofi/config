@@ -1,0 +1,13 @@
+show=drun
+width=750
+height=400
+always_parse_args=true
+show_all=false
+print_command=true
+insensitive=true
+allow_images=true
+prompt= Hmm, what do you want to run?
+key_up=Control_L-k
+key_down=Control_L-j
+key_exit=Control_L-g,Control_L-c,Escape
+gtk_dark=true
