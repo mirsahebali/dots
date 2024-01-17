@@ -80,8 +80,8 @@ exec-once =  kdeconnect-indicator &
 * Script Variables
 #+begin_src conf
 
-$terminal = kitty
-
+# $terminal = kitty
+$terminal = alacritty -e tmux
 # $fileManager = pcmanfm
 
 $fileManager = thunar
@@ -98,7 +98,7 @@ $fuzzel = fuzzel
 
 # $browser = brave-beta --password-store=basic
 
-$browser = librewolf -P default-default
+$browser = librewolf -P default
 
 $notification_panel = swaync-client -t
 
@@ -290,7 +290,7 @@ windowrulev2 = float,class:^(org.kde.systemmonitor)$,title:(System Activity)
 
 windowrulev2 = float,class:(pavucontrol)
 
-windowrulev2 = float,class:(Alacritty)
+#windowrulev2 = float,class:(Alacritty)
 
 #+end_src
 
@@ -327,7 +327,7 @@ $altMod = ALT
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 
 bind = $mainMod, RETURN, exec, $terminal
-bind = $mainMod $altMod, RETURN, exec, alacritty
+bind = $mainMod $altMod, RETURN, exec, kitty -1
 bind = $mainMod SHIFT, U, exec, $pavucontrol
 bind = $mainMod SHIFT, RETURN, exec, $emacsclient
 bind = $mainMod, N, exec, $notification_panel
@@ -348,7 +348,7 @@ bind = $mainMod $altMod, m, exec, librewolf -P Music youtube.com
 bind = $mainMod, U, exec, dunstctl close-all
 bind = $mainMod, O, exec, [workspace 7] okular
 bind = $mainMod SHIFT, R,exec, [workspace 6] fluent-reader
-
+#bind = $mainMod $altMod,RETURN, exec, alacritty 
 # Run Project Manager
 
 bind = $mainMod SHIFT, SPACE, exec, /home/mirsahebali/dots/hypr/scripts/projectr.sh

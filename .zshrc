@@ -122,6 +122,7 @@ alias update_nvim="~/dots/scripts/update_nvim.sh"
 alias update_emacs="~/dots/scripts/update_emacs.sh"
 alias update_dots="~/dots/scripts/update_dots.sh"
 alias rr="ranger"
+alias hx="helix"
 # Alias functions
 rs_waybar(){
   ((killall waybar || waybar &) && waybar &) && ((killall waybar || waybar &) && waybar &)

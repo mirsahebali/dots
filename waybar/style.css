@@ -92,22 +92,10 @@ button:hover {
 #mpd {
   padding: 0 10px;
   color: #ffffff;
-  background-color: rgba(43, 48, 59, 0.5);
-}
-#idle_inhibitor {
-  color: #cb1ed1;
-}
-#pulseaudio {
-  color: greenyellow;
-}
-#cpu {
-  color: #f8e559;
+  background-color: rgba(43, 48, 59, 0.8);
 }
 #temperature {
   color: #7fc7d9;
-}
-#memory {
-  color: #dcf2f1;
 }
 #user {
   padding: 0 10px;
@@ -116,7 +104,7 @@ button:hover {
 #window,
 #taskbar {
   padding: 0 4px;
-  background-color: rgba(43, 48, 59, 0.5);
+  background-color: rgba(43, 48, 59, 0.8);
   border-radius: 0 0 3px 0px;
 }
 #window {
@@ -131,7 +119,7 @@ button:hover {
 #workspaces {
   margin: 0 7px;
   /* padding: 0 7px; */
-  background-color: rgba(43, 48, 59, 0.5);
+  background-color: rgba(43, 48, 59, 0.8);
   border-radius: 0 0 3px 3px;
   font-size: 16px;
 }

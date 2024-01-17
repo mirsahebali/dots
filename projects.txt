@@ -1,8 +1,9 @@
- Database from scratch in GO  ~/Projects/dbs/
- Redis from scratch in C/C++  ~/Projects/redis/
-󰒋 Data Structures in Go  ~/learn/dsa/go/
-󰲒 Haskell Learn 󰡱 ~/learn/haskell/
- Emacs Config  ~/.config/emacs/
- Learn Rust   ~/learn/rust/
- HTMX Stuff  ~/learn/htmx/
- Go Stuff  ~/learn/go/
+ Database from scratch in GO  projects/dbs/
+ Redis from scratch in C/C++  projects/redis/
+󰣑 FocAce in GO projects/focace/
+󰒋 Data Structures in Go  learn/dsa/go/
+󰲒 Haskell Learn 󰡱 learn/haskell/
+ Emacs Config  .config/emacs/
+ Learn Rust   learn/rust/
+ HTMX Stuff  learn/htmx/
+ Go Stuff  learn/go/
