@@ -13,15 +13,15 @@ program = "/usr/bin/zsh"
 style = "Block"
 
 [font]
-size = 13
+size = 12
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMonoNL Nerd Font"
 
 [window]
-startup_mode = "Windowed"
+# startup_mode = ""
 dynamic_padding = true
-# opacity = 0.7
+opacity = 0.75
 
 # [window.padding]
 # x = 6

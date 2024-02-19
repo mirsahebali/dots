@@ -2,7 +2,7 @@
  *
  * Author : Aditya Shakya (adi1090x)
  * Github : @adi1090x
- * 
+ *
  * Configuration For Rofi Version: 1.7.3
  **/
 
@@ -82,7 +82,7 @@ configuration {
 	display-filebrowser: "Files";
 
 	/*---------- Misc setting ----------*/
-  terminal: "alacritty";
+  terminal: "kitty";
 	font: "JetBrains Mono Nerd Font 12";
 	sort: false;
 	threads: 0;
@@ -107,7 +107,7 @@ configuration {
 kb-row-up: "Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab";
 kb-row-down: "Down,Control+j";
 kb-accept-entry: "Control+m,Return,KP_Enter";
-terminal: "mate-terminal";
+terminal: "kitty";
 kb-remove-to-eol: "Control+Shift+e";
 /*kb-mode-next: "Shift+Right,Control+Tab,Control+l";*/
 kb-mode-previous: "Shift+Left,Control+Shift+Tab,Control+h";

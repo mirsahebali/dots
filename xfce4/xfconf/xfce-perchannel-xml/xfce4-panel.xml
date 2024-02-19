@@ -62,6 +62,13 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “jiofiber-eiy2u_5g” active: jiofiber-eiy2u_5g (68%)"/>
+        <value type="string" value="wi-fi network connection “mir saheb&apos;s galaxy m52 5g” active: mir saheb&apos;s galaxy m52 5g (69%)"/>
+        <value type="string" value="wi-fi network connection “jiofiber-eiy2u_5g” active: jiofiber-eiy2u_5g (63%)"/>
+        <value type="string" value="wi-fi network connection “yeh bhikmangeya” active: yeh bhikmangeya (62%)"/>
+        <value type="string" value="wi-fi network connection “jiofiber-eiy2u_5g” active: jiofiber-eiy2u_5g (76%)"/>
+        <value type="string" value="wi-fi network connection “jiofiber-eiy2u_5g” active: jiofiber-eiy2u_5g (62%)"/>
+        <value type="string" value="notes"/>
         <value type="string" value="networking disabled"/>
         <value type="string" value="firewall-applet"/>
       </property>
@@ -109,6 +116,11 @@
     <property name="plugin-21" type="string" value="separator"/>
     <property name="plugin-22" type="string" value="directorymenu">
       <property name="base-directory" type="string" value="/home/mirsahebali"/>
+    </property>
+    <property name="notes" type="empty">
+      <property name="global" type="empty">
+        <property name="version" type="string" value="1.11.0"/>
+      </property>
     </property>
   </property>
 </channel>

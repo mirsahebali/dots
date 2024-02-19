@@ -8,7 +8,7 @@
     "modules-center": ["hyprland/workspaces"],
    "modules-left": ["wlr/taskbar","hyprland/window"],
     "modules-right": [ "idle_inhibitor","privacy" ,"pulseaudio",  "cpu", "memory", "temperature", "backlight", "keyboard-state",  "battery", "tray","clock"],
-  
+
     // Modules configuration
   "hyprland/window": { },
     "privacy": {
@@ -69,7 +69,8 @@
             "6": "",
             "7": " ",
             "8": "󰡱 ",
-            "9": "󰎄 ",
+            "9": " ",
+            "10": "󰎄 ",
             "urgent": "  ",
             "focused": "  ",
             "default": "  "
@@ -83,10 +84,11 @@
           "6": [],
           "7": [],
           "8": [],
-          "9": []
+          "9": [],
+          "10": []
     },
       "sort-by-number": true
-  }, 
+  },
     // "hyprland/mode": {
     //     "format": "<span style=\"italic\">{}</span>"
     // },
@@ -146,7 +148,7 @@
     },
     "memory": {
         "format": "{}% ",
-        "on-click":"alacritty -e 'htop'" 
+        "on-click":"alacritty -e 'htop'"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -188,8 +190,8 @@
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "on-click-right": "nm-applet"
-    
-    
+
+
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -217,8 +219,34 @@
         "width": 30,
         "icon": true,
     "avatar":"/home/mirsahebali/Downloads/Arch-linux-logo-1602415784.png"
-    
-}
+
+},
+    "custom/wl-gammarelay-temperature": {
+        "format": "{} ",
+        "exec": "wl-gammarelay-rs watch {t}",
+        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
+        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
+    },
+    "custom/wl-gammarelay-brightness": {
+        "format": "{}% ",
+        "exec": "wl-gammarelay-rs watch {bp}",
+        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.02",
+        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.02"
+    },
+    "custom/wl-gammarelay-gamma": {
+        "format": "{}% γ",
+        "exec": "wl-gammarelay-rs watch {g}",
+        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d +0.02",
+        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d -0.02"
+    },
+    "custom/wl-gammarelay-applet": {
+    "format": "❍ {}",
+    "exec": "wl-gammarelay-rs watch {t}",
+    "on-click": "wl-gammarelay-applet",
+    "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
+    "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
+},
+
     // "custom/media": {
     //     "format": "{icon} {}",
     //     "return-type": "json",

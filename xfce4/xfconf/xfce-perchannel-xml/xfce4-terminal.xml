@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfce4-terminal" version="1.0">
-  <property name="font-name" type="string" value="JetBrains Mono 12"/>
+  <property name="font-name" type="string" value="JetBrains Mono 18"/>
   <property name="misc-copy-on-select" type="bool" value="true"/>
-  <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_SOLID"/>
+  <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_TRANSPARENT"/>
   <property name="font-use-system" type="bool" value="false"/>
   <property name="misc-menubar-default" type="bool" value="false"/>
   <property name="color-cursor-use-default" type="bool" value="false"/>
