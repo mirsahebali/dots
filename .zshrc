@@ -1,5 +1,5 @@
 # neofetch --config ~/.config/neofetch/small/ozozfetch.conf
-echo "\n (.-.)  {-.-} \n"
+ echo "\n (.-.)  {-.-} \n"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -78,6 +78,12 @@ plugins=(git
     copypath
     copyfile
     dirhistory
+    command-not-found
+    golang
+    man
+    rust
+    vi-mode
+    zoxide
 )
 
 # Bun Completions
@@ -157,10 +163,10 @@ cfmt(){
 co(){
   if [[ -f "$1.cpp" ]]; then
     echo "g++ $1.cpp -o $1 && sleep 1 && ./$1";
-           g++ $1.cpp -o $1; sleep 1; ./$1
+           g++ $1.cpp -o $1 && sleep 1 && ./$1
   else
-    echo gcc $1.c -o $1 && sleep 1 && ./$1
-          gcc $1.c -o $1 && ./$1
+    echo "gcc $1.c -o $1 && sleep 1 && ./$1";
+          gcc $1.c -o $1 && sleep 1 && ./$1;
   fi
 }
 gitacp(){
@@ -296,4 +302,4 @@ fi
 #
 # To initialize zoxide, add this to your configuration (usually ~/.zshrc):
 #
-# eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"
