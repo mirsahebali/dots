@@ -76,13 +76,14 @@
         <value type="string" value="firewall-applet"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="KDE Connect Indicator"/>
         <value type="string" value="blueman"/>
       </property>
     </property>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="known-players" type="string" value="firefox"/>
+      <property name="known-players" type="string" value="firefox;org.kde.kdeconnect.app"/>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>

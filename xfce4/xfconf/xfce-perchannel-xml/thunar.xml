@@ -8,5 +8,5 @@
   <property name="last-show-hidden" type="bool" value="true"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_25_PERCENT"/>
   <property name="last-details-view-visible-columns" type="string" value="THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_NAME,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_TYPE"/>
-  <property name="last-details-view-column-widths" type="string" value="50,50,128,120,50,472,50,50,960,50,50,74,50,103"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,132,120,50,630,50,50,439,50,50,71,50,451"/>
 </channel>

@@ -10,10 +10,10 @@ args = ['--login']
 program = "/usr/bin/zsh"
 
 [cursor]
-style = "Block"
+style = "Beam"
 
 [font]
-size = 12
+size = 15
 
 [font.normal]
 family = "JetBrainsMonoNL Nerd Font"
@@ -21,7 +21,7 @@ family = "JetBrainsMonoNL Nerd Font"
 [window]
 # startup_mode = ""
 dynamic_padding = true
-opacity = 0.75
+# opacity = 0.75
 
 # [window.padding]
 # x = 6

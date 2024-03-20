@@ -7,6 +7,7 @@
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
       <value type="string" value="Xfce4-notifyd settings"/>
+      <value type="string" value="xfce4-power-manager"/>
     </property>
   </property>
   <property name="notify-location" type="string" value="top-right"/>

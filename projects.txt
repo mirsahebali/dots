@@ -1,18 +1,15 @@
-  OS from scratch  	projects-> os
- 󱫋 Learn Networks  	learn-> networks
-  Chat App in Rust  	projects-> room_rs
-  Data Structures(Go) 	learn-> go -> dsa
- 󰞇 Codewars  		fun-> codewars
-  Go Stuff 		learn-> go
-  CLI Todo in Rust  	projects-> cli_todo
-  Advent of Code   	fun-> advent_of_code
-  Rustlings  		learn-> rustlings
-  HTTP Server  	projects-> http_rust
-  Database in GO  	projects-> dbs
-  Redis in C-> C++  	projects-> redis
- 󰡱 Haskell Learn  	learn-> haskell
-  FocAce in GO  	projects-> focace
-  Learn Rust  		learn-> rust
-  C/C++ Stuff  	learn-> cpp
-  HTMX Stuff  		learn-> htmx
+  OS from scratch  	projects -> os
+ 󱫋 Learn Networks  	learn -> networks
+  Chat App in Rust  	projects -> room_rs
+  Data Structures(Go) 	learn -> go -> dsa
+ 󰞇 Codewars  		fun -> codewars
+  Go Stuff 		learn -> go
+  CLI Todo in Rust  	projects -> cli_todo
+  Advent of Code   	fun -> advent_of_code
+  Rustlings  		learn -> rustlings
+ 󰡱 Haskell Learn  	learn -> haskell
+  Learn Rust  		learn -> rust
+  C/C++ Stuff  	learn -> cpp
+  HTMX Stuff  		learn -> htmx
  󰡱 Fun Stuff   		fun
+  Ocaml 		learn -> ocaml

@@ -1,13 +1,5 @@
 # neofetch --config ~/.config/neofetch/small/ozozfetch.conf
- echo "\n (.-.)  {-.-} \n"
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-
+ echo "\n (.-.) \n\n {-.-} \n "
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export QT_QPA_PLATFORM=wayland
@@ -41,6 +33,8 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
+export DENO_INSTALL="/home/mirsahebali/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 # completion
 autoload -Uz compinit
 compinit
@@ -109,6 +103,7 @@ alias alacrittyconf="~/.config/alacritty && nvim"
 alias vim=/usr/bin/nvim
 alias vi=/usr/bin/vim
 alias vi.="/usr/bin/vim ."
+alias vim.="/usr/bin/nvim ."
 alias qemu=qemu-system-x86_64
 alias icat='echo kitty +kitten icat &&  kitty +kitten icat'
 alias :q=exit
@@ -193,9 +188,6 @@ ya() {
 }
 [ -f "/home/mirsahebali/.ghcup/env" ] && source "/home/mirsahebali/.ghcup/env" # ghcup-env
 
-## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-## [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-##
 # Starship zsh prompt
 eval "$(starship init zsh)"
 
@@ -303,3 +295,7 @@ fi
 # To initialize zoxide, add this to your configuration (usually ~/.zshrc):
 #
 eval "$(zoxide init zsh)"
+
+# opam configuration
+[[ ! -r /home/mirsahebali/.opam/opam-init/init.zsh ]] || source /home/mirsahebali/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+PROMPT_EOL_MARK=''

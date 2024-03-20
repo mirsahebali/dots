@@ -1,4 +1,4 @@
 swaylock -i \
-"/home/mirsahebali/dots/walpapers/wallpaperflare.com_wallpaper1.jpg" \
+"$HOME/.config/walpapers/wallhaven-l8vxwl.png" \
 	--layout-bg-color 6c6377 \
 	--layout-border-color 416aa3
