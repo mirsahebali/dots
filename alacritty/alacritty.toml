@@ -16,7 +16,7 @@ style = "Beam"
 size = 15
 
 [font.normal]
-family = "JetBrainsMonoNL Nerd Font"
+family = "JetBrainsMono Nerd Font"
 
 [window]
 # startup_mode = ""

@@ -1,4 +1,6 @@
   OS from scratch  	projects -> os
+  LSP from scratch	projects -> lsp
+ 󱃖 Leetcode in Rust 	learn -> leetcode
  󱫋 Learn Networks  	learn -> networks
   Chat App in Rust  	projects -> room_rs
   Data Structures(Go) 	learn -> go -> dsa

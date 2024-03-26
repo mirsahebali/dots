@@ -57,13 +57,13 @@ col=0
 row=8
 col=0
 
-[/home/mirsahebali/yay]
-row=4
-col=0
-
 [/home/mirsahebali/Notes]
 row=6
 col=3
+
+[/home/mirsahebali/ansi.sh]
+row=2
+col=0
 
 [/home/mirsahebali/Learn Haskell by building a blog generator.pdf]
 row=2
@@ -124,10 +124,6 @@ col=1
 [/home/mirsahebali/Music]
 row=1
 col=1
-
-[3b50e1a1-207a-42bb-853f-2c9a074b7669]
-row=2
-col=0
 
 [Trash]
 row=3

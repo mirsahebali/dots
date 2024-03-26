@@ -54,3 +54,4 @@ windows:
         - vim
   - server:
   - logs:
+  - example: ~/learn/eframe_template/ && vim

@@ -6,6 +6,7 @@
   <property name="theme" type="string" value="Bright"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="org.kde.kdeconnect.daemon"/>
       <value type="string" value="Xfce4-notifyd settings"/>
       <value type="string" value="xfce4-power-manager"/>
     </property>
